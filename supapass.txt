@@ -1,0 +1,11 @@
+3M5IYIYgGdo2V1N0
+
+URL
+https://kmtseykrffhxoquruzbx.supabase.co
+
+API Key
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImttdHNleWtyZmZoeG9xdXJ1emJ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM0MzgyNDYsImV4cCI6MjA2OTAxNDI0Nn0.QUc9dxYZYg3aUPrRwskdIEgrTMzFyd1KG3S4p9MueC4
+
+id for loggedIn
+salwanfarid@gmail.com
+Covid-19
