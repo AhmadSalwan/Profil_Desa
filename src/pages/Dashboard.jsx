@@ -73,7 +73,7 @@ export default function Dashboard() {
           <Link to="/artikel" className="dashboard-link artikel">
             📰 Kelola Artikel
           </Link>
-          <Link to="/" className="dashboard-link home">
+          <Link to="/home" className="dashboard-link home">
             🏠 Lihat Halaman Home Website
           </Link>
         </div>

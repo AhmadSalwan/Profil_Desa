@@ -11,6 +11,27 @@ export default function ArtikelDetail() {
   const [judulEdit, setJudulEdit] = useState('');
   const [isiEdit, setIsiEdit] = useState('');
 
+  const fetchArtikel = async () => {
+    const { data, error } = await supabase
+      .from('artikel')
+      .select('*')
+      .eq('id', id)
+      .single();
+
+    if (error || !data) {
+      console.error('Gagal memuat artikel:', error);
+      navigate('/artikel');
+      return;
+    }
+
+    setArtikel(data);
+    setJudulEdit(data.judul);
+    setIsiEdit(data.isi);
+    setLoading(false);
+  };
+    useEffect(() => {  
+    fetchArtikel();
+    }, [id, navigate]);
 
      const handleUpdate = async (e) => {
         e.preventDefault();
@@ -27,28 +48,8 @@ export default function ArtikelDetail() {
             alert('Gagal memperbarui artikel:', error.message);
           }
     }
-    const fetchArtikel = async () => {
-      const { data, error } = await supabase
-        .from('artikel')
-        .select('*')
-        .eq('id', id)
-        .single();
-
-      if (error || !data) {
-        console.error('Gagal memuat artikel:', error);
-        navigate('/artikel');
-        return;
-      }
-
-      setArtikel(data);
-      setJudulEdit(data.judul);
-      setIsiEdit(data.isi);
-      setLoading(false);
-    };
-  useEffect(() => {  
-    fetchArtikel();
-  }, [id, navigate]);
-  if (loading) return <div style={styles.loading}>Memuat artikel...</div>;
+  if (loading) return 
+  <div style={styles.loading}>Memuat artikel...</div>;
 
   return (
     <div style={styles.container}>
